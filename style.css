@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    font-family:Poppins,sans-serif;
+}
+
+:root{
+    --FC:black;
+    --SC:aqua;
+    --TC:white;
+}
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: var(--FC);
+    color: white;
+} 
+
+header{
+    max-width: 1024px;
+    margin-inline:1rem;
+    padding: 15px 0;
+    display: flex;justify-content: space-between;align-items: baseline;
+}
+@media(max-width:700px){
+    header{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .logo{
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media(min-width:1048px){
+    header{
+        margin: auto;
+    }
+}
+.nav_link{
+    display: inline-block;
+    margin: 0 30px;
+    padding:15px 0;
+    position: relative;
+    border-radius: 25px;
+    color: var(--TC);
+}
+.nav_link::after{
+    content:"";
+    height: 2px;
+    width:0;
+    position: absolute;
+    left:-1px;
+    bottom:12px;
+    border-radius: 25px;
+    background-color: var(--SC);
+    transition: .55s;
+}
+.nav_link:hover::after{
+    width: 100%;
+}
+
+main{
+    max-width: 1024px;
+    margin-inline:1rem;
+}
+
+@media(min-width:1048px){
+    main{
+        margin-inline: auto;
+    }
+}
+
+section{
+    padding-top:3rem;
+    padding-bottom:2rem;
+}
+.home{
+    height: calc(100vh - 65px);
+    display: flex;flex-direction: column; justify-content: center;
+    text-align: center;
+}
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--SC);
+    text-align: center;
+}
+.home button{
+    width: 200px;
+    margin: 20px 10px;
+    padding: 15px 0;
+    position: relative;
+    background-color: transparent;
+    color: white;
+    border: 2px solid;
+    border-radius:25px;
+    overflow: hidden;
+    z-index: 2;   
+}
+#home button span{
+    height: 100%;
+    width:0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--SC);
+    border-radius: 25px;
+    z-index: -1;
+    transition: .5s;
+}
+#home button:hover span{
+    width: 100%;
+}
+#home button:hover{
+    border: none;
+}
+
+.Skills{
+    max-width: 500px;
+    margin-inline: auto;
+}
+.Skills article{
+    margin-bottom: 2rem;
+    padding: .5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--SC);
+    border-radius: .5rem;    
+    position: relative;
+    transition: .5s;
+    overflow: hidden;
+}
+article:hover{
+    transform: translatey(-20px);
+}
+.bar{
+    height: 4px;
+    width:0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: .5rem;
+    background-color: aqua;
+}
+.html{
+    width: 100%;
+}
+.java{
+    width: 85%;
+}
+.python{
+    width: 50%;
+}
+
+
+
+
+
+
+
+
+
